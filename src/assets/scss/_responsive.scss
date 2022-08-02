@@ -1,0 +1,28 @@
+@media (max-width: 677px) {
+    .app-wrapper {
+        flex-direction: column !important;
+    }
+    
+    div#sidebar {
+        position: static;
+        height: auto !important;
+        width: 100%;
+    }
+    
+    .app-wrapper .main {
+        width: 100%;
+        margin-left: 0 !important;
+        padding: 0;
+    }
+    
+    .app-wrapper .main > div {
+        padding: 0;
+    }
+    
+    .sidebar ul li a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 1rem 1rem 0;
+    } 
+}

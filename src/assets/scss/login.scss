@@ -1,0 +1,17 @@
+.login-page {
+    width: 350px;
+    max-width: 94%;
+}
+
+.show-password {
+    position: absolute;
+    right: 1rem;
+    top: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-submit {
+    margin-top: 1.625rem;
+}

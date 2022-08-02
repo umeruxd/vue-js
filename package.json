@@ -1,0 +1,32 @@
+{
+  "name": "stripe-checkout",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 8033",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@popperjs/core": "^2.11.0",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.2",
+    "sass": "^1.45.1",
+    "serve-static": "^1.14.2",
+    "vee-validate": "^4.5.7",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4"
+  }
+}

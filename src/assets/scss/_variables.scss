@@ -1,0 +1,125 @@
+$black: #000000;
+$gray: #575767;
+$light-gray: #F6F6F6;
+$light-gray-2: #DADADA;
+$purple: #9C88FF;
+$red:#BF392B;
+$green:#2ECC71;
+$yellow:#d6a813;
+$white:#FFFFFF;
+
+$primary: $purple;
+
+$colors: (primary: $purple,
+    purple: $purple,
+    black: $black,
+    gray: $gray,
+    red: $red,
+    green: $green,
+    yellow: $yellow,
+    light-gray: $light-gray,
+    white: $white,
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("black": map-get($colors, black),
+        "gray": map-get($colors, gray)),
+    $theme-colors);
+
+@each $colorKey,
+$colorName in $colors {
+    .text-#{""+$colorKey} {
+        color: $colorName !important;
+    }
+
+    .bg-#{""+$colorKey},
+    .btn-#{""+$colorKey} {
+        background-color: $colorName !important;
+    }
+
+    .btn-outline-#{""+$colorKey} {
+        border-color: $colorName !important;
+        color: $colorName !important;
+        box-shadow: 0 4px 8px 0 rgba($colorName, 0);
+        background-color: rgba(255, 255, 255, 0) !important;
+
+        &:hover,
+        &:focus {
+            background-color: $colorName !important;
+            color: #FFF !important;
+        }
+    }
+
+    .btn-#{""+$colorKey} {
+        color: #fff !important;
+        box-shadow: 0 4px 8px 0 rgba($colorName, 0.24);
+        border-color: $colorName;
+
+        &:hover,
+        &:focus {
+            background: rgba($colorName, 0.8) !important;
+            box-shadow: 0 6px 12px 0 rgba($colorName, 0.24) !important;
+            border-color: $colorName;
+        }
+
+        &:active {
+            box-shadow: 0 0 0 0.25rem rgba($colorName, 0.25) !important;
+            border-color: $colorName;
+        }
+    }
+}
+
+$fontSizer: (13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 45, 50, 80);
+$fontWeight: (300, 400, 500, 600, 700);
+
+@each $fontsize in $fontSizer {
+    .fz-#{$fontsize} {
+        font-size: #{$fontsize}px !important;
+    }
+}
+
+@each $fontweight in $fontWeight {
+    .fw-#{$fontweight} {
+        font-weight: #{$fontweight} !important;
+    }
+}
+
+$spacers: () !default;
+$spacers: map-merge((5: 5px,
+        10: 10px,
+        15: 15px,
+        20: 20px,
+        25: 25px,
+        30: 30px,
+        35: 35px,
+        40: 40px,
+        45: 45px,
+        50: 50px,
+        55: 55px,
+        60: 60px,
+        65: 65px,
+        70: 70px,
+        75: 75px,
+        80: 80px,
+        85: 85px,
+        90: 90px,
+        95: 95px,
+        100: 100px),
+    $spacers);
+
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@mixin transition($delay) {
+    transition: all ease $delay;
+}

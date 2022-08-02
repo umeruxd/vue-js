@@ -1,0 +1,21 @@
+.form-control {
+    background: $light-gray;
+    border: 1px solid $light-gray-2;
+    border-radius: 2px;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &.border-darker {
+        border-color: rgba($light-gray, 0.8) !important;
+    }
+
+    &:focus {
+        border-color: $purple;
+        box-shadow: 0 0 0 0.25rem rgba($purple, 15%);
+    }
+
+    &::placeholder {
+        color: rgba($gray, 0.3) !important
+    }
+}
